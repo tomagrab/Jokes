@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#sidebar-toggle:checked ~ .sidebar {
+    @apply w-24;
+}
+
+#sidebar-toggle:not(:checked) ~ .sidebar {
+@apply w-0;
+}
+
+#sidebar-toggle:checked ~ div > nav > div > label > .sidebar-toggle-btn {
+@apply -rotate-180;
+}
+
+#sidebar-toggle:not(:checked) ~ div > nav > div > label > .sidebar-toggle-btn {
+@apply rotate-0;
+}
