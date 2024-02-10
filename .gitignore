@@ -1,0 +1,32 @@
+# Compiled output
+**/bin/
+**/obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# IDE / OS junk
+.vs/
+.vscode/
+Thumbs.db
+*.ipch
+
+# Dependency directories
+/packages/
+/node_modules/
+
+# Logs
+[Ll]og/
+*.log
+
+# Example of output from TailwindCSS
+/wwwroot/css/styles.css
+
+# Visual Studio 2015/2017 and up
+/.vscode/
+*.suo
+
+app.db
