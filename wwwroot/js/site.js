@@ -2,11 +2,3 @@
 // for details on configuring this project to bundle and minify static web assets.
 
 // Write your JavaScript code.
-document.getElementById('toggleAside').addEventListener('click', function() {
-    const sidebarToggle = document.getElementById(
-        'sidebar-toggle',
-      );
-      sidebarToggle.addEventListener('change', () => {
-        setSidebarOpen(!sidebarToggle.checked);
-      });
-});
