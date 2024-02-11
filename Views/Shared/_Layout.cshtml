@@ -5,32 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Jokes</title>
     <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+    <script src="https://kit.fontawesome.com/8e4196e614.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="flex min-h-screen">
-
         <input type="checkbox" id="sidebar-toggle" name="sidebar-toggle" class="hidden" />
-
         <aside class="sidebar transition-all duration-300 ease-in-out overflow-hidden bg-velgray" id="sidebar">
-            <div class="h-16 bg-velblue">
-
+            <div class="flex justify-center items-center h-16 bg-velblue">
+                <img src="~/images/VTrack-Logo-Small.png" alt="Velocitor Solutions" class="" />
             </div>
-            <div class="">
-                <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                <a asp-area="" asp-controller="Jokes" asp-action="Index">Jokes</a>
+            <div class="flex flex-col items-center py-4">
+                <div class="group flex items-center justify-center">
+                    <a id="dashboard-link" asp-area="" asp-controller="Home" asp-action="Index" class="relative h-16">
+                        <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
+                            <i class="fa-solid fa-gauge-high fa-2x"></i>
+                        </span>
+                        <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform opacity-0">
+                            Dashboard
+                        </span>
+                    </a>
+                </div>
+                <div class="group flex items-center justify-center">
+                    <a id="fleet-link" asp-area="" asp-controller="Home" asp-action="Privacy" class="relative h-16">
+                        <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
+                            <i class="fa-solid fa-location-dot fa-2x"></i>
+                        </span>
+                        <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform opacity-0">
+                            Fleet
+                        </span>
+                    </a>
+                </div>
+                <div class="group flex items-center justify-center">
+                    <a id="reports-link" asp-area="" asp-controller="Jokes" asp-action="Index" class="relative h-16">
+                        <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
+                            <i class="fa-solid fa-chart-column fa-2x"></i>
+                        </span>
+                        <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform opacity-0">
+                            Report
+                        </span>
+                    </a>
+                </div>
             </div>
         </aside>
 
         <div class="flex flex-col grow">
-            <header class="flex items-center w-full h-16 bg-white">
+            <header class="flex items-center w-full h-16 bg-white px-4">
                 <div class="justify-start w-1/2">
                     <label htmlFor="sidebar-toggle" for="sidebar-toggle" class="cursor-pointer">
-                        Toggle Sidebar
+                        <i class="fa-solid fa-chevrons-right fa-1x text-veldarkgray transition-transform duration-300 ease-in-out"></i>
                     </label>
                 </div>
                 <div class="flex shrink-0 justify-center">
-                    <a asp-area="" asp-controller="Home" asp-action="Index">Jokes</a>
+                    <a asp-area="" asp-controller="Home" asp-action="Index">
+                        <img src="~/images/VTrack-Logo-Large.png" alt="Velocitor Solutions" class="h-12" />
+                    </a>
                 </div>
                 <div class="flex justify-end w-1/2">
                     <partial name="_LoginPartial" />
@@ -41,10 +69,10 @@
                     @RenderBody()
                 </main>
             </div>
-            <footer class="">
-                <div class="text-sm">
+            <footer class="flex items-center h-8 px-4">
+                <p class="text-sm">
                     &copy; 2024 <a class="text-vellink" href="https://www.velsol.com/" target="_blank">Velocitor Solutions</a>
-                </div>
+                </p>
             </footer>
         </div>
     </div>

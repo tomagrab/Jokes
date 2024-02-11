@@ -7,12 +7,16 @@
 }
 
 #sidebar-toggle:not(:checked) ~ .sidebar {
-@apply w-0;
+    @apply w-0;
+}
+
+#sidebar-toggle:checked ~ div > header > div > label > i {
+    @apply transform -rotate-180;
 }
 
 .sidebar {
     @apply w-0 overflow-hidden transition-all duration-300 ease-in-out;
-} 
+}
 
 /* Sidebar open by default ONLY on larger screens */
 @media (min-width: 768px) { 
