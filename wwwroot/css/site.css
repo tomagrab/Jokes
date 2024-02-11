@@ -10,10 +10,13 @@
 @apply w-0;
 }
 
-#sidebar-toggle:checked ~ div > nav > div > label > .sidebar-toggle-btn {
-@apply -rotate-180;
-}
+.sidebar {
+    @apply w-0 overflow-hidden transition-all duration-300 ease-in-out;
+} 
 
-#sidebar-toggle:not(:checked) ~ div > nav > div > label > .sidebar-toggle-btn {
-@apply rotate-0;
+/* Sidebar open by default ONLY on larger screens */
+@media (min-width: 768px) { 
+    #sidebar-toggle:checked ~ .sidebar {
+        @apply w-24;
+    }
 }
