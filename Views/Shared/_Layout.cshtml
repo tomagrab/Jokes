@@ -15,36 +15,21 @@
                 <img src="~/images/VTrack-Logo-Small.png" alt="Velocitor Solutions" class="" />
             </div>
             <div class="flex flex-col items-center py-4">
-                <div class="group flex items-center justify-center">
-                    <a id="dashboard-link" asp-area="" asp-controller="Home" asp-action="Index" class="relative h-16">
-                        <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
-                            <i class="fa-solid fa-gauge-high fa-2x"></i>
-                        </span>
-                        <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform opacity-0">
-                            Dashboard
-                        </span>
-                    </a>
-                </div>
-                <div class="group flex items-center justify-center">
-                    <a id="fleet-link" asp-area="" asp-controller="Home" asp-action="Privacy" class="relative h-16">
-                        <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
-                            <i class="fa-solid fa-location-dot fa-2x"></i>
-                        </span>
-                        <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform opacity-0">
-                            Fleet
-                        </span>
-                    </a>
-                </div>
-                <div class="group flex items-center justify-center">
-                    <a id="reports-link" asp-area="" asp-controller="Jokes" asp-action="Index" class="relative h-16">
-                        <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform">
-                            <i class="fa-solid fa-chart-column fa-2x"></i>
-                        </span>
-                        <span class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 transform opacity-0">
-                            Report
-                        </span>
-                    </a>
-                </div>
+                @await Component.InvokeAsync("SidebarItem", new {
+                    linkText = "Dashboard",
+                    iconClass = "fa-solid fa-gauge-high fa-2x",
+                    aspArea = "", aspController = "Home", aspAction = "Index"
+                })
+                @await Component.InvokeAsync("SidebarItem", new {
+                    linkText = "Fleet",
+                    iconClass = "fa-solid fa-location-dot fa-2x",
+                    aspArea = "", aspController = "Home", aspAction = "Privacy"
+                })
+                @await Component.InvokeAsync("SidebarItem", new {
+                    linkText = "Drivers",
+                    iconClass = "fa-solid fa-user fa-2x",
+                    aspArea = "", aspController = "Home", aspAction = "Privacy"
+                })
             </div>
         </aside>
 
