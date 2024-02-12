@@ -12,6 +12,7 @@ module.exports = {
         velyellowgreen: '#d9e252',
         veldarkgray: '#21292e',
         velgray: '#263238',
+        velgrayhover: '#2a363c',
         vellightgray: '#bbc1c7',
         vellink: '#56bfb5',
         officegreen: '#008000',

@@ -9,12 +9,12 @@ function handleSidebarToggle(mediaQuery) {
   if (mediaQuery.matches) {
     sidebarToggle.checked = true;
   } else {
-    sidebarToggle.checked = false; 
+    sidebarToggle.checked = false;
   }
 }
 
-// Initial check on page load 
+// Initial check on page load
 handleSidebarToggle(mediaQuery);
 
 // Listen for screen resize
-mediaQuery.addEventListener('change', handleSidebarToggle); 
+mediaQuery.addEventListener('change', handleSidebarToggle);
