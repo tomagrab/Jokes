@@ -10,29 +10,7 @@
 <body>
     <div class="flex min-h-screen">
         <input type="checkbox" id="sidebar-toggle" name="sidebar-toggle" class="hidden" />
-        <aside class="sidebar transition-all duration-300 ease-in-out overflow-hidden bg-velgray" id="sidebar">
-            <div class="flex justify-center items-center h-16 bg-velblue">
-                <img src="~/images/VTrack-Logo-Small.png" alt="Velocitor Solutions" class="" />
-            </div>
-            <div class="flex flex-col items-center py-4">
-                @await Component.InvokeAsync("SidebarItem", new {
-                    linkText = "Dashboard",
-                    iconClass = "fa-solid fa-gauge-high fa-2x",
-                    aspArea = "", aspController = "Home", aspAction = "Index"
-                })
-                @await Component.InvokeAsync("SidebarItem", new {
-                    linkText = "Fleet",
-                    iconClass = "fa-solid fa-location-dot fa-2x",
-                    aspArea = "", aspController = "Home", aspAction = "Privacy"
-                })
-                @await Component.InvokeAsync("SidebarItem", new {
-                    linkText = "Drivers",
-                    iconClass = "fa-solid fa-user fa-2x",
-                    aspArea = "", aspController = "Home", aspAction = "Privacy"
-                })
-            </div>
-        </aside>
-
+        <partial name="_SidebarPartial" />
         <div class="flex flex-col grow">
             <header class="flex items-center w-full h-16 bg-white px-4">
                 <div class="justify-start w-1/2">
